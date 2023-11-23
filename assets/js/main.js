@@ -26,69 +26,75 @@
 	 * Applies parallax scrolling to an element's background image.
 	 * @return {jQuery} jQuery object.
 	 */
-	$.fn._parallax = (browser.name == 'ie' || browser.name == 'edge' || browser.mobile) ? function() { return $(this) } : function(intensity) {
-
-		var	$window = $(window),
+	$.fn._parallax = (browser.name == 'ie' || browser.name == 'edge' || browser.mobile) ? function() { return $(this); } : function(intensity) {
+    
+		var $window = $(window),
 			$this = $(this);
-
+	
 		if (this.length == 0 || intensity === 0)
 			return $this;
-
+	
 		if (this.length > 1) {
-
 			for (var i=0; i < this.length; i++)
 				$(this[i])._parallax(intensity);
-
 			return $this;
-
 		}
-
+	
 		if (!intensity)
-			intensity = 0.25;
-
+			intensity = 0.25; // default intensity
+	
 		$this.each(function() {
-
+	
 			var $t = $(this),
 				on, off;
-
+	
 			on = function() {
-
 				$t.css('background-position', 'center 100%, center 100%, center 0px');
-
-				$window
-					.on('scroll._parallax', function() {
-
-						var pos = parseInt($window.scrollTop()) - parseInt($t.position().top);
-
-						$t.css('background-position', 'center ' + (pos * (-1 * intensity)) + 'px');
-
-					});
-
+	
+				$window.on('scroll._parallax', function() {
+					var pos = parseInt($window.scrollTop()) - parseInt($t.position().top);
+					var windowWidth = $window.width();
+					var adjustedIntensity;
+	
+					        // Adjust intensity based on window width
+							if (windowWidth >= 1281 ) { // xlarge
+								adjustedIntensity = -0.3;
+							} else if (windowWidth >= 981 && windowWidth < 1281) { // large
+								adjustedIntensity = 0.3;
+							} else if (windowWidth >= 737 && windowWidth < 981) { // medium
+								adjustedIntensity = 0.3;
+							} else if (windowWidth >= 481 && windowWidth < 737) { // small
+								adjustedIntensity = 0.3;
+							} else if (windowWidth >= 361 && windowWidth < 481) { // xsmall
+								adjustedIntensity = 0.3;
+							} else if (windowWidth <= 360) { // xxsmall
+								adjustedIntensity = 0.3;
+							} else {
+								adjustedIntensity = intensity; // default for other sizes
+							}
+	
+					$t.css('background-position', 'center ' + (pos * adjustedIntensity) + 'px');
+				});
 			};
-
+	
 			off = function() {
-
-				$t
-					.css('background-position', '');
-
-				$window
-					.off('scroll._parallax');
-
+				$t.css('background-position', '');
+				$window.off('scroll._parallax');
 			};
-
-			breakpoints.on('<=medium', off);
+	
+			// Toggle the parallax effect based on breakpoints
+			breakpoints.on('<=medium', on);
 			breakpoints.on('>medium', on);
-
+	
 		});
-
+	
 		$window
 			.off('load._parallax resize._parallax')
 			.on('load._parallax resize._parallax', function() {
 				$window.trigger('scroll');
 			});
-
+	
 		return $(this);
-
 	};
 
 	// Play initial animations on page load.
