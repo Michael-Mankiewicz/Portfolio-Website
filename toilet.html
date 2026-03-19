@@ -1,0 +1,158 @@
+<!DOCTYPE HTML>
+<!--
+	Forty by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+	<head>
+		<title>Robot Toilet</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+	</head>
+	<body class="is-preload">
+
+		<!-- Wrapper -->
+			<div id="wrapper">
+
+				<!-- Header -->
+				<!-- Note: The "styleN" class below should match that of the banner element. -->
+					<header id="header" class="alt style2">
+						<a href="index.html" class="logo"><strong>Home</strong></a>
+					</header>
+
+				<!-- Menu -->
+					<nav id="menu">
+						<ul class="links">
+							<li><a href="index.html">Home</a></li>
+							<li><a href="landing.html">Landing</a></li>
+							<li><a href="generic.html">Generic</a></li>
+							<li><a href="elements.html">Elements</a></li>
+						</ul>
+						<ul class="actions stacked">
+							<li><a href="#" class="button primary fit">Get Started</a></li>
+							<li><a href="#" class="button fit">Log In</a></li>
+						</ul>
+					</nav>
+
+				<!-- Banner -->
+				<!-- Note: The "styleN" class below should match that of the header element. -->
+					<section id="banner" class="style3">
+						<div class="inner">
+							<span class="image">
+								<img src="images/toilet.jpg" alt="" />
+							</span>
+							<header class="major">
+								<h1>Moving Robotic Toilet</h1>
+							</header>
+							<div class="content">
+								<p>A robotic toilet that predicts the trajectory of a liquid before it lands, and quickly moves the bowl to catch it.</p>
+							</div>
+						</div>
+					</section>
+
+				<!-- Main -->
+					<div id="main">
+
+						<!-- One 
+							<section id="one">
+								<div class="inner">
+									<header class="major">
+										<h2>Sed amet aliquam</h2>
+									</header>
+									<p>Nullam et orci eu lorem consequat tincidunt vivamus et sagittis magna sed nunc rhoncus condimentum sem. In efficitur ligula tate urna. Maecenas massa vel lacinia pellentesque lorem ipsum dolor. Nullam et orci eu lorem consequat tincidunt. Vivamus et sagittis libero. Nullam et orci eu lorem consequat tincidunt vivamus et sagittis magna sed nunc rhoncus condimentum sem. In efficitur ligula tate urna.</p>
+								</div>
+							</section>-->
+
+						<!-- Two -->
+							<section id="two" class="spotlights">
+								<section>
+									<a href="generic.html" class="image">
+										<img src="images/toiletshot.png" alt="" data-position="center center" />
+									</a>
+									<div class="content">
+										<div class="inner">
+											<header class="major">
+												<h3>Description</h3>
+											</header>
+											<p>To refine my skills and test myself, I set on the ambitious journey of building an automatically aiming toilet. Using a "controller" I created using a repurposed siracha bottle, the user would need to fill the bottle with water, stand infront of the machine, hold the bottle near waist height, aim at any position within a 1x1 meter square, and the machine will never let the user spill water on the floor. Using a variety of sensors, the machine will rapidly move the bowl underneath the stream of water.</p>
+											
+										</div>
+									</div>
+								</section>
+								<section>
+									<a href="generic.html" class="image">
+										<img src="images/ppcomputervision.png" alt="" data-position="top center" />
+									</a>
+									<div class="content">
+										<div class="inner">
+											<header class="major">
+												<h3>Computer Vision</h3>
+											</header>
+											<p>Using a GoPro, the Intel RealSense Depth Camera, retroreflective tape, and linear algebra matrix math, I used the Python OpenCV library and depth camera information to detect the X, Y, and height position and angle of the bottle, and toilet bowl. Based on all this informaiton, as well as a flowsensor to detect initial velocity, I was able to use kinematic physics equations to predict the landing position of the liquid before landing, as well as what direction and how far to move the bowl to catch it.</p>
+											
+										</div>
+									</div>
+								</section>
+								<section>
+									<a href="generic.html" class="image">
+										<img src="images/arduino.png" alt="" data-position="25% 25%" />
+									</a>
+									<div class="content">
+										<div class="inner">
+											<header class="major">
+												<h3>Arduino/Electronics</h3>
+											</header>To better organize the project, I isolated all movement programming to the Arduino, and computer vision and physics calculations to a separate, more powerful PC. The Arduino controlled 2 DC motors, reading rotary encoder information for each, as well as flowsensor data from the bottle to calculate initial velocity using Bernoulli's principle and the diameter of the bottle opening. The arduino was responsible for controlling the bowl using a system of belts and pulleys, which a similar layout commonly used by 3D printers (CoreXY). The arduino has a function that receives movement coordinates and moves the bowl accordingly, and the movement coordinates are received via USB from the computer vision software, which runs physics calculations.</p>
+										</div>
+									</div>
+								</section>
+							</section>
+
+						<!-- Three -->
+						<section id="three">
+							<div class="inner">
+								<header class="major">
+									<h2>Skills Used</h2>
+								</header>
+								<ul>
+									<li>Arduino</li>
+									<li>C++</li>
+									<li>Interrupts</li>
+									<li>Serial Communication</li>
+									<li>Python</li>
+									<li>Computer Vision</li>
+									<li>OpenCV</li>
+									<li>Intel RealSense Depth Camera</li>
+									<li>Linear Algebra</li>
+									<li>Kinematic Physics</li>
+								</ul>
+							</div>
+						</section>
+
+					</div>
+
+				<!-- Footer -->
+				<footer id="footer">
+					<div class="inner">
+						<ul class="icons">
+							<li><a href="https://github.com/Michael-Mankiewicz" class="icon brands alt fa-github"><span class="label">GitHub</span></a></li>
+							<li><a href="https://www.linkedin.com/in/michael-mankiewicz-01271619a/" class="icon brands alt fa-linkedin-in"><span class="label">LinkedIn</span></a></li>
+						</ul>
+					</div>
+				</footer>
+
+			</div>
+
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/jquery.scrolly.min.js"></script>
+			<script src="assets/js/jquery.scrollex.min.js"></script>
+			<script src="assets/js/browser.min.js"></script>
+			<script src="assets/js/breakpoints.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
+
+	</body>
+</html>
