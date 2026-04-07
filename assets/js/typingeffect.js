@@ -1,5 +1,5 @@
 document.addEventListener("DOMContentLoaded", function() {
-    const text = "Hi, My Name is Michael. I build real-time engineering systems.";
+    const text = "Hi, I'm Michael. I build real-time engineering systems.";
     const typingElement = document.getElementById('typing');
     typingElement.style.fontFamily = "'Courier New', monospace";
     const typingContainer = document.createElement('span'); // Create a container
