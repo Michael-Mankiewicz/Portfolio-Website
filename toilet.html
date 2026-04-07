@@ -1,119 +1,169 @@
-<section id="banner" class="style3">
-	<div class="inner">
-		<span class="image">
-			<img src="images/toilet.jpg" alt="" />
-		</span>
-		<header class="major">
-			<h1>Computer Vision Trajectory Robot</h1>
-		</header>
-		<div class="content">
-			<p>A real-time robotic system that predicts fluid trajectories and dynamically repositions a moving platform to intercept targets.</p>
-		</div>
-	</div>
-</section>
+<!DOCTYPE HTML>
+<!--
+	Forty by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+	<head>
+		<title>Computer Vision Trajectory Robot</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+	</head>
+	<body class="is-preload">
 
-<div id="main">
+		<div id="wrapper">
 
-	<section id="one">
-		<div class="inner">
-			<header class="major">
-				<h2>Technical Overview</h2>
+			<header id="header" class="alt style3">
+				<a href="index.html" class="logo"><strong>Home</strong></a>
+				<nav>
+					<a href="#menu">Menu</a>
+				</nav>
 			</header>
-			<p>
-				This project is a real-time robotic system built to predict where a fluid stream will land and move a platform underneath it before impact.
-				The system combines computer vision, depth sensing, encoder feedback, flow sensing, and physics-based prediction to calculate landing position
-				and command motion in real time.
-			</p>
-			<ul class="actions">
-				<li><a href="https://www.youtube.com/watch?v=QnUJFqGpr1w" class="button primary">Watch Demo</a></li>
-				<li><a href="https://github.com/I-Did-The-Math/MovingToilet/tree/main" class="button">Python / Vision Code</a></li>
-				<li><a href="https://github.com/I-Did-The-Math/MovingToilet-Arduino" class="button">Arduino Control Code</a></li>
-			</ul>
-		</div>
-	</section>
 
-	<section id="two" class="spotlights">
-		<section>
-			<a href="#" class="image">
-				<img src="images/ppcomputervision.png" alt="" data-position="top center" />
-			</a>
-			<div class="content">
+			<nav id="menu">
+				<ul class="links">
+					<li><a href="index.html">Home</a></li>
+				</ul>
+			</nav>
+
+			<section id="banner" class="style3">
 				<div class="inner">
+					<span class="image">
+						<img src="images/toilet.jpg" alt="Computer Vision Trajectory Robot" />
+					</span>
 					<header class="major">
-						<h3>Computer Vision & Trajectory Prediction</h3>
+						<h1>Computer Vision Trajectory Robot</h1>
 					</header>
-					<p>
-						Using OpenCV and an Intel RealSense depth camera, the system tracks the source position and orientation in 3D space.
-						Retroreflective markers improve detection reliability and allow the system to estimate position from camera input.
-					</p>
-					<p>
-						A flow sensor provides initial velocity data, and projectile motion equations are used to predict the landing position before impact.
-						These calculations determine where the platform must move and how quickly it must respond.
-					</p>
+					<div class="content">
+						<p>A real-time robotic system that predicts fluid trajectories and dynamically repositions a moving platform to intercept targets.</p>
+					</div>
 				</div>
-			</div>
-		</section>
+			</section>
 
-		<section>
-			<a href="#" class="image">
-				<img src="images/arduino.png" alt="" data-position="25% 25%" />
-			</a>
-			<div class="content">
-				<div class="inner">
-					<header class="major">
-						<h3>Hardware & Control System</h3>
-					</header>
-					<p>
-						The platform uses a custom CoreXY gantry driven by DC motors and controlled through Arduino-based motor logic.
-						Rotary encoders provide rapid position feedback, while the PC handles higher-level vision and prediction.
-					</p>
-					<p>
-						A closed-loop PID control system is used to move the platform accurately and quickly. Serial communication separates
-						high-level trajectory computation from low-level motor execution.
-					</p>
-				</div>
-			</div>
-		</section>
+			<div id="main">
 
-		<section>
-			<a href="#" class="image">
-				<img src="images/toiletshot.png" alt="" data-position="center center" />
-			</a>
-			<div class="content">
+				<section id="one">
+					<div class="inner">
+						<header class="major">
+							<h2>Technical Overview</h2>
+						</header>
+						<p>
+							This project is a real-time robotic system built to predict where a fluid stream will land and move a platform underneath it before impact.
+							The system combines computer vision, depth sensing, encoder feedback, flow sensing, and physics-based prediction to calculate landing position
+							and command motion in real time.
+						</p>
+						<ul class="actions">
+							<li><a href="https://www.youtube.com/watch?v=QnUJFqGpr1w" class="button primary">Watch Demo</a></li>
+							<li><a href="https://github.com/I-Did-The-Math/MovingToilet/tree/main" class="button">Python / Vision Code</a></li>
+							<li><a href="https://github.com/I-Did-The-Math/MovingToilet-Arduino" class="button">Arduino Code</a></li>
+						</ul>
+					</div>
+				</section>
+
+				<section id="two" class="spotlights">
+					<section>
+						<a href="#" class="image">
+							<img src="images/ppcomputervision.png" alt="Computer vision view" data-position="top center" />
+						</a>
+						<div class="content">
+							<div class="inner">
+								<header class="major">
+									<h3>Computer Vision &amp; Trajectory Prediction</h3>
+								</header>
+								<p>
+									Using OpenCV and an Intel RealSense depth camera, the system tracks the source position and orientation in 3D space.
+									Retroreflective markers improve detection reliability and allow the system to estimate position from camera input.
+								</p>
+								<p>
+									A flow sensor provides initial velocity data, and projectile motion equations are used to predict the landing position before impact.
+									These calculations determine where the platform must move and how quickly it must respond.
+								</p>
+							</div>
+						</div>
+					</section>
+
+					<section>
+						<a href="#" class="image">
+							<img src="images/arduino.png" alt="Arduino and electronics" data-position="25% 25%" />
+						</a>
+						<div class="content">
+							<div class="inner">
+								<header class="major">
+									<h3>Hardware &amp; Control System</h3>
+								</header>
+								<p>
+									The platform uses a custom CoreXY gantry driven by DC motors and controlled through Arduino-based motor logic.
+									Rotary encoders provide rapid position feedback, while the PC handles higher-level vision and prediction.
+								</p>
+								<p>
+									A closed-loop PID control system is used to move the platform accurately and quickly. Serial communication separates
+									high-level trajectory computation from low-level motor execution.
+								</p>
+							</div>
+						</div>
+					</section>
+
+					<section>
+						<a href="#" class="image">
+							<img src="images/toiletshot.png" alt="Robot system overview" data-position="center center" />
+						</a>
+						<div class="content">
+							<div class="inner">
+								<header class="major">
+									<h3>Key Challenges &amp; Optimization</h3>
+								</header>
+								<p>
+									One of the biggest engineering challenges was achieving useful response time in a real-world physical system.
+									The project required synchronizing camera input, encoder feedback, and flow sensor data while maintaining stable and accurate movement.
+								</p>
+								<p>
+									A major optimization was replacing slow camera-based platform tracking with encoder-based estimation, reducing response time
+									from roughly 0.1 seconds to 0.001 seconds and making real-time interception practical.
+								</p>
+							</div>
+						</div>
+					</section>
+				</section>
+
+				<section id="three">
+					<div class="inner">
+						<header class="major">
+							<h2>Technologies Used</h2>
+						</header>
+						<p>
+							Python, OpenCV, Intel RealSense Depth Camera, Arduino / C++, computer vision, sensor fusion, PID control,
+							serial communication, linear algebra, projectile motion / kinematic physics, and CoreXY motion systems.
+						</p>
+						<ul class="actions">
+							<li><a href="https://github.com/I-Did-The-Math/MovingToilet/tree/main" class="button">View Python / Vision Code</a></li>
+							<li><a href="https://github.com/I-Did-The-Math/MovingToilet-Arduino" class="button">View Arduino Code</a></li>
+						</ul>
+					</div>
+				</section>
+
+			</div>
+
+			<footer id="footer">
 				<div class="inner">
-					<header class="major">
-						<h3>Key Challenges & Optimization</h3>
-					</header>
-					<ul>
-						<li>Integrated vision, encoder, and flow sensor data into one real-time system</li>
-						<li>Predicted landing position before impact using physics-based modeling</li>
-						<li>Handled camera lag and improved responsiveness with encoder-based estimation</li>
-						<li>Reduced response time from 0.1 seconds to 0.001 seconds</li>
+					<ul class="icons">
+						<li><a href="https://github.com/Michael-Mankiewicz" class="icon brands alt fa-github"><span class="label">GitHub</span></a></li>
+						<li><a href="https://www.linkedin.com/in/michael-mankiewicz/" class="icon brands alt fa-linkedin-in"><span class="label">LinkedIn</span></a></li>
 					</ul>
 				</div>
-			</div>
-		</section>
-	</section>
+			</footer>
 
-	<section id="three">
-		<div class="inner">
-			<header class="major">
-				<h2>Technologies Used</h2>
-			</header>
-			<ul>
-				<li>Python</li>
-				<li>OpenCV</li>
-				<li>Intel RealSense Depth Camera</li>
-				<li>Arduino / C++</li>
-				<li>Computer Vision</li>
-				<li>Sensor Fusion</li>
-				<li>PID Control</li>
-				<li>Serial Communication</li>
-				<li>Linear Algebra</li>
-				<li>Projectile Motion / Kinematic Physics</li>
-				<li>CoreXY Motion System</li>
-			</ul>
 		</div>
-	</section>
 
-</div>
+		<script src="assets/js/jquery.min.js"></script>
+		<script src="assets/js/jquery.scrolly.min.js"></script>
+		<script src="assets/js/jquery.scrollex.min.js"></script>
+		<script src="assets/js/browser.min.js"></script>
+		<script src="assets/js/breakpoints.min.js"></script>
+		<script src="assets/js/util.js"></script>
+		<script src="assets/js/main.js"></script>
+
+	</body>
+</html>
